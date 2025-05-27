@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- Header Section with Logo Centered Above Text -->
+    <header class="form-header">
+        <img src="logo.png" alt="Logo" class="logo">
+        <h2>Select a Student to View Donors</h2>
+    </header>
+
+    <!-- Text box for filtering the dropdown -->
+    <input
+            type="text"
+            id="filterTextbox"
+            class="filter-textbox"
+            aria-label="Filter students by name"
+            placeholder="Filter students..."
+            oninput="filterStudents()"
+            autofocus>
+
+    <!-- Dropdown to select student name -->
+    <label for="nameSelect">Choose a Student:</label>
+    <select
+            id="nameSelect"
+            aria-label="Select a student from the list"
+            onchange="showDonors()">
+        <option value="">--Select a Student--</option>
+        <!-- Student names will be populated here dynamically -->
+    </select>
+
+    <!-- Div where donor details will be displayed -->
+    <div id="donorList" class="donor-details" role="region" aria-live="polite"></div>
+</div>
+
+<script src="form.js"></script>
+</body>
+</html>
