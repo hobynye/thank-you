@@ -3,7 +3,7 @@ let filteredDonors = []; // Store filtered donor data after applying the filter
 
 // Function to load the donor data from the JSON file
 async function loadDonors() {
-    const response = await fetch('donors.json'); // Fetch data from donors.json
+    const response = await fetch('https://script.google.com/macros/s/AKfycbxzpcHvjGeiCNB45VkctYEPQ6Ncm7mR260_F4V4ppOwP8zTprxSF4dmhQIPImm7eZeABA/exec'); // Fetch data from donors.json
     allDonors = await response.json();
 
     // Sort student names by last name (descending), then by first name (descending)
